@@ -10,18 +10,42 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 
 const raisedToTheThird = (arr) => {
   // Solution code here...
+  for-each
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
 Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+//   let newarr=[];
+//   arr.forEach(function(value, i){
+//     console.log(i);
+//     console.log(value);
+//   });
+//   Math.pow(newarr[i], 3);
+};
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 2
+
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
+main
 ------------------------------------------------------------------------------------------------ */
 
 const addOne = (arr) => {
   // Solution code here...
+for-each
 };
 
+  let plusOne=[];
+  plusOne = arr.map( function(n) {
+    return n + 1;
+  });
+  console.log(plusOne);
+  return plusOne;
+};
+
+
+main
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
@@ -30,6 +54,13 @@ Write a function named addQuestion that, given an array of strings, uses map to 
 
 const addQuestion = (arr) => {
   // Solution code here...
+for-each
+  let stringArray=[];
+  stringArray = arr.map(function(value){
+    return value + '?';
+  });
+  console.log(stringArray);
+ main
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -44,6 +75,9 @@ For example, twoToThe([1,2,3]) returns [2,4,8] because 2 ^ 1 = 2, 2 ^ 2 = 4, and
 
 const forLoopTwoToThe = (arr) => {
   // Solution code here...
+ for-each
+
+main
 };
 
 /* ------------------------------------------------------------------------------------------------
