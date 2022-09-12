@@ -25,7 +25,6 @@ Use `forEach` to loop over the input array. Modify each string, and add the upda
 ------------------------------------------------------------------------------------------------ */
 
 const addExclamation = (arr) => {
-  // Solution code here...
   let plusExc = [];
   arr.forEach((word) => {
     plusExc.push (word + '!');
@@ -47,8 +46,8 @@ const allUpperCase = (arr) => {
     newArr.push(arrayElement.toUpperCase());
   });
   return newArr;
-
 };
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -60,7 +59,6 @@ Use `forEach` to build a new array of strings, each string modified by the callb
 ------------------------------------------------------------------------------------------------ */
 
 const greeting = (word) => {
-
   return word.toUpperCase()+'!';
 };
 
@@ -70,7 +68,6 @@ const speaker = (words, callback) => {
     newArr.push (callback(word));
   });
   return newArr;
-
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +100,7 @@ const addNumbers = (num, arr, times, callback) => {
 
 CHALLENGE 6
 
-Write a function named createList that takes in an array of the current store intentory.
+Write a function named createList that takes in an array of the current store inventory.
 
 The inventory is formatted like this:
 [
@@ -126,7 +123,6 @@ const createList = (availableItems) => {
   });
   return finalList;
 };
-
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
 
@@ -142,7 +138,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let wordOutput = [];
+  arr.forEach(element => {
+    if ((element % 3 === 0) && (element % 5 ===0)) {
+      wordOutput.push('Fizz Buzz');
+    } else if (element % 3 === 0) {
+      wordOutput.push('Fizz');
+    } else if (element % 5 === 0) {
+      wordOutput.push('Buzz');
+    } else {
+      wordOutput.push(element);
+    }
+  });
+  return wordOutput;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -196,7 +204,7 @@ describe('Testing challenge 6', () => {
   });
 });
 
-xdescribe('Testing challenge 7', () => {
+describe('Testing challenge 7', () => {
   const inputs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
   test('It should print out messages or numbers', () => {
