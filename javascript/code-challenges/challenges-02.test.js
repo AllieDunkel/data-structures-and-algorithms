@@ -16,14 +16,13 @@ map
   });
   return newArr;
 
-  // Solution code here...
-  for-each
+ 
 };
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
-Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1. 
+Write a function named addOne that, given an array of numbers, uses map to return a new array with each value simply incremented by 1.
 //   let newarr=[];
 //   arr.forEach(function(value, i){
 //     console.log(i);
