@@ -6,4 +6,8 @@
 
 [Code Challenge 03: array-binary-search](array-binary-shift.md)
 
+[Code Challenge 04: mock-interview-01](mock-interview-01.md)
+
+[Code Challenge 05: linked-list](linked-list.md)
+
 [Code Challenge 06: linked-list-insertions](linked-list-insertions.md)
