@@ -11,3 +11,5 @@
 [Code Challenge 05: linked-list](linked-list.md)
 
 [Code Challenge 06: linked-list-insertions](linked-list-insertions.md)
+
+[Code Challenge 07: linked-list-kth](linked-list-kth.md)
