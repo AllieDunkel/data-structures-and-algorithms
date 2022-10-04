@@ -15,3 +15,5 @@
 [Code Challenge 07: linked-list-kth](linked-list-kth.md)
 
 [Code Challenge 08: linked-list-zip](linked-list-zip.md)
+
+[Code Challenge 11: Stacks and Queues](stack-and-queue.md)
