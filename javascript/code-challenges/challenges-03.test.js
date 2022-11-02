@@ -10,7 +10,7 @@ const addTwo = (arr) => {
   // Solution code here...
   let plusTwo=[];
   for(let i=0; i<arr.length; i++){
-    plusTwo.push((num) => num + 2);
+    plusTwo.push(arr[i] + 2);
   } console.log(plusTwo);
   return plusTwo;
 };
@@ -23,14 +23,7 @@ Write a function named typeNum that, given an array as input, uses filter to ret
 For example, typeNum([1, 'bob' ,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
-const typeNum = (arr) => {
-  // Solution code here...
-  let onlyNum= arr.filter(
-    element => typeof element === 'number'
-  );
-  console.log(onlyNum);
-}
-return (onlyNum);
+const typeNum = (arr) => arr.filter (value => typeof value === 'number');
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -41,9 +34,7 @@ Write a function named containsAnd that, given an array of strings as input, use
 For example, containsAnd(['panda', 'ran', 'and']) returns ['panda', 'and'].
 ------------------------------------------------------------------------------------------------ */
 
-const containsAnd = (arr) => {
-  // Solution code here...
-};
+const containsAnd = (arr) => arr.filter(value => value.includes('and'));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -54,7 +45,8 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  // Solution code here...
+  let array4 = arr.filter(oddInt => oddInt%2);
+  return array4;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,7 +58,11 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let arrfind = arr.filter(element => {
+    return forbiddenValues.indexOf(element) === -1;
+  });
+
+  return arrfind;
 };
 
 /* ------------------------------------------------------------------------------------------------
