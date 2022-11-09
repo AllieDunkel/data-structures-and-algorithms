@@ -24,9 +24,7 @@ let starWarsPeople = [
   },
 ];
 
-const sortStarWarsCharacters = (starWarsArr) => {
-  // Solution code here...
-};
+const sortStarWarsCharacters = (starWarsArr) => starWarsArr.sort((a,b) => b.height - a.height);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -35,9 +33,9 @@ Write a function named removeThree that takes an index and an array. The functio
 ------------------------------------------------------------------------------------------------ */
 
 const removeThree = (idx, arr) => {
-  let words = arr.slice(idx, 5);
-  console.log(words);
-  return words;
+  arr.splice(idx, 3);
+ 
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,10 +44,7 @@ CHALLENGE 3
 Write a function named joinArray that takes an array and joins all of the elements together in one string on a space.
 ------------------------------------------------------------------------------------------------ */
 
-const joinArray = (arr) => {
-  let join= arr.join(' ');
-  return join;
-};
+const joinArray = (arr) => arr.join(' ');
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -66,9 +61,9 @@ For example, if the input is 'Welcome', the output will be:
 
 const howMuchPencil = (str) => {
   let result = [];
-  result = str.slice(0, 8);
-  for(let i=0; i<str.length; i++)
-    console.log(result);
+  for (let i=0; i<= str.length; i++) {
+    result.push(str.slice(i));
+  }
   return result;
 };
 
@@ -80,9 +75,7 @@ Write a function name wordsToCharList that, given a string as input, returns a n
 For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 ------------------------------------------------------------------------------------------------ */
 
-const wordsToCharList = (arr) => {
-  // Solution code here...
-};
+const wordsToCharList = (arr) => arr.split('');
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -128,7 +121,7 @@ const gruffaloCrumble = {
 
 const listFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  recipe.ingredients.forEach(ingredients => result.push(ingredients.slice(ingredients.indexOf(' ',4) + 1)));
   return result;
 };
 
@@ -249,7 +242,7 @@ Run your tests from the console: jest challenges-05.test.js
 
 ------------------------------------------------------------------------------------------------ */
 
-xdescribe('Testing challenge 1', () => {
+describe('Testing challenge 1', () => {
   test('It should sort the star wars characters by height from tallest to shortest', () => {
     expect(sortStarWarsCharacters(starWarsPeople)[0]['name']).toStrictEqual('Luke Skywalker');
     expect(sortStarWarsCharacters(starWarsPeople)[2]['height']).toStrictEqual('96');
@@ -277,7 +270,7 @@ describe('Testing challenge 4', () => {
   });
 });
 
-xdescribe('Testing challenge 5', () => {
+describe('Testing challenge 5', () => {
   test('It should return an array of individual letters', () => {
     expect(wordsToCharList('Gregor')).toStrictEqual(['G', 'r', 'e', 'g', 'o', 'r']);
     expect(wordsToCharList('Gregor').length).toStrictEqual(6);
@@ -286,7 +279,7 @@ xdescribe('Testing challenge 5', () => {
   });
 });
 
-xdescribe('Testing challenge 6', () => {
+describe('Testing challenge 6', () => {
   test('It should return a list of foods', () => {
     expect(listFoods(gruffaloCrumble)).toStrictEqual(['Gruffalo', 'oats', 'brown sugar', 'flour', 'pure maple syrup', 'chopped nuts', 'baking soda', 'baking powder', 'cinnamon', 'melted butter', 'fresh water']);
     expect(listFoods(gruffaloCrumble).length).toStrictEqual(11);
