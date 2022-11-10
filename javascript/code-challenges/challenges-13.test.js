@@ -7,7 +7,8 @@ Write a function named longestString that takes in an array of strings and retur
 ------------------------------------------------------------------------------------------------ */
 
 const longestString = (arr) => {
-// Solution code here...
+  let longStr = arr.reduce((previous, current) => previous.length > current.length ? previous : current, '');
+  return arr.indexOf(longStr);
 };
   
 /* ------------------------------------------------------------------------------------------------
@@ -18,9 +19,7 @@ Write a function named firstLetters that takes in an array of strings and return
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['t', 'w', 'w', ':']
 ------------------------------------------------------------------------------------------------ */
 
-const firstLetters = (arr) => {
-  // Solution code here...
-};
+const firstLetters = (arr) => arr.map(string => string.charAt(0));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -30,9 +29,7 @@ Write a function named findHappiness that takes in an array of strings and retur
 For example, ['this is great :)', 'wow', 'whyyyyyy :(', ':)))))'] returns ['this is great :)', ':)))))']
 ------------------------------------------------------------------------------------------------ */
 
-const findHappiness = (arr) => {
-  // Solution code here...
-};
+const findHappiness = (arr) => arr.filter(string => string.includes(':)'));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -42,9 +39,7 @@ Write a function named standardizePhoneNumbers that takes in an array of phone n
 For example, (123) 456-7890 returns 1234567890
 ------------------------------------------------------------------------------------------------ */
 
-const standardizePhoneNumbers = (arr) => {
-  // Solution code here...
-};
+const standardizePhoneNumbers = (arr) => arr.map(phone => phone.substring(1, 4) + phone.substring(6,9) + phone.substring(10,14));
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5 
@@ -55,7 +50,11 @@ For example, 'abcdefg' returns 'bdf'
 ------------------------------------------------------------------------------------------------ */
 
 const onlyOddChars = (str) => {
-  // Solution code here...
+  let result = '';
+  for (let i=1; i<str.length; i+= 2) {
+    result += str.charAt(i);
+  }
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,9 +63,7 @@ CHALLENGE 6
 Write a function named allHappy that takes in an array of strings and returns a Boolean indicating whether all those strings contain ":)".
 ------------------------------------------------------------------------------------------------ */
 
-const allHappy = (arr) => {
-  // Solution code here...
-};
+const allHappy = (arr) => arr.filter(string => string.includes(':)')).length === arr.length;
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
